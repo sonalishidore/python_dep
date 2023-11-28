@@ -1,4 +1,4 @@
 #!/bin/bash
 
-sudo yum update
-sudo yum install nginx
+sudo systemctl daemon-reload
+sudo systemctl restart nginx
