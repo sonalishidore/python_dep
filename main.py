@@ -1,12 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask
+helloworld = Flask(__name__)
+@helloworld.route ("/")
+def run ():
+    return "{\"message\":\"Hey there Python\"}"
 
-app = Flask(__name__)
-
-
-@app.route('/')
-def success():
-    return render_template('index.html')
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     helloworld.run(host="0.0.0.0", port=int("3000"), debug= True)
